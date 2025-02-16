@@ -1,0 +1,93 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\PopStarBanner.jpg",
+      "PackagePath": "staticwebassets\\images\\PopStarBanner.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\bailey_ellis.webp",
+      "PackagePath": "staticwebassets\\images\\bailey_ellis.webp"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\billie_eilish.jpg",
+      "PackagePath": "staticwebassets\\images\\billie_eilish.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\blue_man_group.jpg",
+      "PackagePath": "staticwebassets\\images\\blue_man_group.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\color_test.jpg",
+      "PackagePath": "staticwebassets\\images\\color_test.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\elvis.jpg",
+      "PackagePath": "staticwebassets\\images\\elvis.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\eminem.jpg",
+      "PackagePath": "staticwebassets\\images\\eminem.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\kellan_quade.webp",
+      "PackagePath": "staticwebassets\\images\\kellan_quade.webp"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\kellin_quinn.jpg",
+      "PackagePath": "staticwebassets\\images\\kellin_quinn.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\michael_jackson.jpg",
+      "PackagePath": "staticwebassets\\images\\michael_jackson.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\posey_malvern.webp",
+      "PackagePath": "staticwebassets\\images\\posey_malvern.webp"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\post_malone.jpg",
+      "PackagePath": "staticwebassets\\images\\post_malone.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\talia_mcray.webp",
+      "PackagePath": "staticwebassets\\images\\talia_mcray.webp"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\tate_mcrae.jpg",
+      "PackagePath": "staticwebassets\\images\\tate_mcrae.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\tayla_swann.webp",
+      "PackagePath": "staticwebassets\\images\\tayla_swann.webp"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\taylor_swift.jpg",
+      "PackagePath": "staticwebassets\\images\\taylor_swift.jpg"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\testo.webp",
+      "PackagePath": "staticwebassets\\images\\testo.webp"
+    },
+    {
+      "Id": "D:\\Users\\Rem Skole\\Documents\\AllKode\\React\\PopStarManager\\backend\\PopStarManagerApi\\wwwroot\\images\\tiesto.jpg",
+      "PackagePath": "staticwebassets\\images\\tiesto.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PopStarManagerApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PopStarManagerApi.props",
+      "PackagePath": "build\\PopStarManagerApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PopStarManagerApi.props",
+      "PackagePath": "buildMultiTargeting\\PopStarManagerApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PopStarManagerApi.props",
+      "PackagePath": "buildTransitive\\PopStarManagerApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
