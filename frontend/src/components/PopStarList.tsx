@@ -6,8 +6,7 @@ const PopStarList = () => {
     const { filteredPopStars } = usePopStarContext();
 
     return (
-        <div className="min-h-max">
-            <h1 className="text-white text-3xl">Pop Stars</h1>
+        <div>
             <div className="bg-music-black  rounded-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
                 
                 {filteredPopStars.length > 0 ? (

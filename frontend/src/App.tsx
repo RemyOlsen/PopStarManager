@@ -5,11 +5,8 @@ import { PopStarPage, AdminPage } from './pages/PageIndex';
 import Navbar from './components/shared/Navbar';
 import Hero from './components/shared/Hero';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-
 import './App.css'
-import Searchbar from './components/shared/Searchbar';
+import Footer from './components/shared/Footer';
 
 function App() {
 
@@ -25,6 +22,7 @@ function App() {
                   <Route path = "/admin" element = {<AdminPage />}></Route>
                   <Route path = "*" element = {<h1>Not Found</h1>}></Route>
               </Routes>
+              <Footer />
             </div>
         </BrowserRouter>
       </PopStarProvider>

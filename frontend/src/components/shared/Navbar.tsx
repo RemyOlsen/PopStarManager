@@ -1,7 +1,7 @@
+// I'm using <NavLink> here instead of <Link> because I want to style the active link differently from the inactive link.
+
 import { NavLink } from "react-router-dom";
 
-// I'm using <NavLink> here instead of <Link> because I want to style the active link differently from the inactive link.
-// <NavLink> is a special version of the <Link> that will add styling attributes to the rendered element when it matches the current URL.
 function Navbar() {
 
     enum NavLinkStyles {

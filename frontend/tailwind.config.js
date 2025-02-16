@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'music-green': '#1ed760',
+        'music-darkgreen': '#19b350',
         'music-black': '#121212'
       }
     },

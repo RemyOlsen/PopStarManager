@@ -1,0 +1,98 @@
+/* CSS file for demonstation, only used in adminPage */
+/*  
+    I put "admin-" prefix before all classes,
+    so they won't accidentally overwrite tailwind classes,
+    since CSS files are global scoped in React
+*/
+.admin-text-white {
+    color: white;
+}
+
+.admin-h1 {
+    font-size: 1.875rem;
+    padding-bottom: 1rem;
+
+}
+
+.admin-h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+/* Mobile-first styling */
+.admin-container {
+    margin: 0 auto;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    max-width: 1536px;
+}
+
+
+.admin-toggle-button {
+    display: block;
+    max-width: 100%;
+    min-width: auto;
+    border-radius: 0.25rem;
+    background-color:var(--color-music-green);
+    color: #000;
+    border: none;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+/* Button Hover */
+.admin-toggle-button:hover {
+    background-color: var(--color-music-darkgreen);
+}
+
+/* Hide admin operations */
+.admin-operations {
+    display: none;
+    margin-bottom: 20px;
+}
+
+/* When active on smalls creen it will show the operations */
+.admin-operations.active {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Divider, don't think tailwind got one of these classes*/
+.divider {
+    height: 1px;
+    background-color: #4CAF50;
+    margin: 20px 0;
+}
+
+.admin-operations.active + divider {
+    display: block;
+}
+
+/* Medium screen */
+@media screen and (min-width: 601px) {
+    .admin-toggle-button {
+        display: none;
+    }
+
+    .admin-operations,
+    .admin-operations.active {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 900px) {
+    .admin-operations,
+    .admin-operations.active {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+  

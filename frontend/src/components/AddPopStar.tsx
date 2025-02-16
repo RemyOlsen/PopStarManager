@@ -93,18 +93,18 @@ function AddPopStar() {
         }
     }
 
-    
+    // Changes the style of the input fields, it's down here so less scrolling is needed
     const inputStyle = 'border-2 my-1 p-1 border-music-green rounded bg-music-black text-center text-white';
-
     return(
-        <div className="">
+        <div>
             
-            <h1 className="text-white">Add a new Pop Star</h1>
+            <h1 className="text-white text-xl">Add a new Pop Star</h1>
             <div>
                 {/* <label className="text-white">Pop Star ID: </label> */}
                 <input 
                 type="number"
                 placeholder="Id"
+                value = {newPopStar.id || ""}
                 onChange={changePopStarId} 
                 className={inputStyle}
                 />
@@ -114,6 +114,7 @@ function AddPopStar() {
                 <input 
                 type="text"
                 placeholder="Name"
+                value={newPopStar.name}
                 onChange={changePopStarName} 
                 className = {inputStyle}
                 />
@@ -121,34 +122,36 @@ function AddPopStar() {
             <div>
                 {/* <label className="text-white">Category: </label> */}
                 <input 
-                type="text"
-                placeholder="Category"
-                onChange={changePopStarCategory} 
+                type = "text"
+                placeholder = "Category"
+                value = {newPopStar.category}
+                onChange = {changePopStarCategory} 
                 className = {inputStyle}
                 />
             </div>
             <div>
                 {/* <label className="text-white">Price per hour: </label> */}
                 <input 
-                type="number"
-                placeholder="Price per hour"
-                onChange={changePopStarPricePerHour} 
+                type = "number"
+                value = {newPopStar.pricePerHour || ""}
+                placeholder = "Price per hour"
+                onChange = {changePopStarPricePerHour} 
                 className = {inputStyle}
                 />
             </div>
-
+            <p className="text-sm text-yellow-500">Price in Thousands</p>
             <div>
                 <input 
-                type="file"
-                placeholder='Image'
-                onChange={handleImageChange}
-                className='text-white'
+                type = "file"
+                placeholder = 'Image'
+                onChange = {handleImageChange}
+                className = 'text-white my-3'
                 />
             </div>
             <div>
                 <button
                     onClick={handleAddNewPopStar}
-                    className='bg-music-green text-black rounded p-2 hover:scale-105 transition-transform my-2'>
+                    className='bg-music-green hover:bg-music-darkgreen font-bold text-black rounded p-2 hover:scale-105 transition-transform my-1 w-52'>
                         <FontAwesomeIcon icon={faPlus} />
                         &nbsp; Add
                 </button>

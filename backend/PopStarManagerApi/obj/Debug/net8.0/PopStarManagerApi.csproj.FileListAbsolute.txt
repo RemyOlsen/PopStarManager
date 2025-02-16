@@ -157,3 +157,4 @@ D:\Users\Rem Skole\Documents\AllKode\React\PopStarManager\backend\PopStarManager
 D:\Users\Rem Skole\Documents\AllKode\React\PopStarManager\backend\PopStarManagerApi\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\Users\Rem Skole\Documents\AllKode\React\PopStarManager\backend\PopStarManagerApi\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 D:\Users\Rem Skole\Documents\AllKode\React\PopStarManager\backend\PopStarManagerApi\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\Users\Rem Skole\Documents\AllKode\React\PopStarManager\backend\PopStarManagerApi\obj\Debug\net8.0\PopStarManagerApi.sourcelink.json

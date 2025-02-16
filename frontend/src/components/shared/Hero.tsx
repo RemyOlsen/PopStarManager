@@ -1,4 +1,5 @@
-// useLocation is a hook that returns the location object that represents the current URL.
+// I'm using useLocation, it's a hook that returns the location of the current URL.
+// I'm using it to change the hero image based on the current URL.
 import { useLocation } from 'react-router-dom';
 
 function Hero() {
@@ -26,25 +27,9 @@ function Hero() {
     return (
     <div
         className={`${textStyle} ${textColor} h-96 ${backgroundPosition} `}
-        style={{ backgroundImage: `url(${imagePath})` }}
-    >
-      {LocationTextOverlay()}
+        style={{ backgroundImage: `url(${imagePath})` }} >
     </div>
     )
-}
-
-
-function LocationTextOverlay() {
-    const location = useLocation();
-
-    switch (location.pathname) {
-        case "/":
-            return "Pop Star Page";
-        case "/admin":
-            return "Admin Page";
-        default:
-            return "Not Found";
-    }
 }
 
 export default Hero;

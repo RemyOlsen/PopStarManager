@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <style>
+        body {
+            margin-inline: 20%;
+            font-size: 1rem;
+            font-family: sans-serif
+        }
+        .get {
+            color: lightblue;
+        }
+        .post {
+            color: lightgreen;
+        }
+        .put {
+            color: orange;
+        }
+        .delete {
+            color: red;
+        }
+        .text-marking {
+            background: #dddddd6c;
+        }
+        code {
+            background: #1f1f1f;
+            padding: 0.5rem; 
+            color: white;
+            border-radius: 5px;
+            display: block;
+            white-space: pre-wrap;
+            font-family: monospace;
+            margin-bottom: 1px
+        }
+        table { width: 100%; ; margin-top: px; }
+        th, td { border-bottom: 1px solid #ccc; padding: 12px; text-align: left; }
+        th { background: #ddd; }
+    </style>
+</head>
+    <h1>Documentation</h1>
+
+    <h2>Introduction</h2>
+    <p>Made by Candidate 7 for the resumption exam in DS3103 Web Development.</p>
+    <p>This documentation will help you understand how to use the API for the Pop Star Manager website</p>
+
+    <h2>API</h2>
+    <p><b>Base url:</b> <a href="http://localhost:5282/api/">http://localhost:5282/api/</a></p>
+
+    <h1>Pop Star</h1>
+    <p>There are several endpoints for the Pop Star API</p>
+
+    <h2>Pop Star schema</h2>
+    <p>The Pop Star schema is as follows:</p>
+    <table>
+        <tr>
+            <th>Key</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>int</td>
+            <td>
+                The unique identifier for the pop star. (Auto Generated, can be specified) 
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>string</td>
+            <td>The name of the pop star.</td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>string</td>
+            <td>The category/genre of music</td>
+        </tr>
+        <tr>
+            <td>PricePerHour</td>
+            <td>int</td>
+            <td>The price per hour for the pop star.
+        </tr>
+        <tr>
+            <td>Image</td>
+            <td>string</td>
+            <td>The name of the image plus file extension (image.jpg)</td>
+        </tr>
+    </table>
+
+    <h3>Get all Pop Stars</h3>
+    <p>
+        You can get a list of pop star by using the <span class="text-marking">/popstar</span> endpoint.
+    </p>
+    <code>
+        <span class="get">GET </span><span style="color: lightslategray">http://localhost:5282/api</span>/popstar
+    </code>
+    <code>
+[
+    {
+        "id": 1,
+        "name": "Billie Eilish",
+        "category": "Pop",
+        "pricePerHour": 1000,
+        "image": "billie_eilish.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Tate McRae",
+        "category": "Pop",
+        "pricePerHour": 900,
+        "image": "tate_mcrae.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Halsey",
+        "category": "Pop",
+        "pricePerHour": 1000,
+        "image": "halsey.jpg"
+    },
+    // ...
+    </code>
+
+    <h3>Get a single Pop Star</h3>
+    <p>
+        You can get a single character by using the <span class="text-marking">/popstar/{id}</span> endpoint.
+    </p>
+    <code>
+        <span class="get">GET </span><span style="color: lightslategray">http://localhost:5282/api</span>/popstar/3
+    </code>
+    <code>
+    {
+        "id": 3,
+        "name": "Halsey",
+        "category": "Pop",
+        "pricePerHour": 1000,
+        "image": "halsey.jpg"
+    }
+    </code>
+
+    <h2>Filter Pop Stars</h2>
+    <p>
+        You can also filter pop stars in the url by using the different keys in the schema.
+
+        Available filters:
+        <ul>
+            <li>name</li>
+            <li>category</li>
+            <li>price</li>
+        </ul>
+    </p>
+    <h3>Name Example</h3>
+    <code>
+        <span class="get">GET </span><span style="color: lightslategray">http://localhost:5282/api/popstar</span>/name/Billie Eilish
+    </code>
+    <code>
+[
+    {
+        "id": 1,
+        "name": "Billie Eilish",
+        "category": "Pop",
+        "pricePerHour": 1000,
+        "image": "billie_eilish.jpg"
+    }
+]
+    </code>
+    <h3>Category Example</h3>
+    <code>
+        <span class="get">GET </span><span style="color: lightslategray">http://localhost:5282/api/popstar</span>/category/Emo
+    </code>
+    <code>
+[
+    {
+        "id": 9,
+        "name": "Kellin Quinn",
+        "category": "Emo",
+        "pricePerHour": 400,
+        "image": "kellin_quinn.jpg"
+    },
+    // ...
+    </code>
+    <h3>Price Example</h3>
+    <code>
+        <span class="get">GET </span><span style="color: lightslategray">http://localhost:5282/api/popstar</span>/price/1000
+    </code>
+    <code>
+[
+    {
+        "id": 2,
+        "name": "Tate McRae",
+        "category": "Pop",
+        "pricePerHour": 1000,
+        "image": "tate_mcrae.jpg"
+    },
+    // ...
+    </code>
+
+    <h1> POST, PUT, DELETE </h1>
+    <p>
+        <Strong>
+            Important:
+        </Strong>
+    </p>
+    <p>
+        
+        You can also add, edit, and delete pop stars.<br />
+       <b>To perform these actions, you need to use Axios with JavaScript on the frontend or another solution like Swagger or something.</b>
+    </p>
+
+    <h2>Add a pop star</h2>
+    <p>
+        You can add a popstar by using the <span class="text-marking">/popstar</span> endpoint.
+    </p>
+    <code>
+        <span class="post">POST </span><span style="color: lightslategray">http://localhost:5282/api</span>/popstar
+    </code>
+    
+    <p>
+        This needs to be done with a POST request and the body should contain the new popstar information.
+    </p>
+
+
+    <h2>Edit a pop star</h2>
+    <p>
+        You can edit a pop star by using the <span class="text-marking">/popstar/{id}</span> endpoint.
+    </p>
+    <code>
+        <span class="put">PUT </span><span style="color: lightslategray">http://localhost:5282/api</span>/popstar/3
+    </code>
+
+    <p>
+        This needs to be done with a POST request and the body should contain the updated information.
+    </p>
+
+    <h2>Delete a pop star</h2>
+    <p>
+        You can delete a pop star by using the <span class="text-marking">/popstar/{id}</span> endpoint.
+    </p>
+    <code>
+        <span class="delete">DELETE </span><span style="color: lightslategray">http://localhost:5282/api</span>/popstar/3
+    </code>
+
+    <p>
+        This needs to be done with a DELETE request from the frontend or other API testing tool.
+    </p> 
+
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import PopStarService from '../services/PopStarService';
 import IPopStar from '../interfaces/IPopStar';
 
@@ -104,20 +104,6 @@ export const PopStarProvider: React.FC<{ children: ReactNode }> = ({ children })
             setPopStars([]);
         }
     }
-
-    // #Filtering locally
-    // const filterPopStarsLocallyByCategory = (searchTerm: string) => {
-    //     if (!searchTerm) {
-    //         setFilteredPopStars(popStars);
-    //         return;
-    //     }
-
-    //     const filtering = popStars.filter((p) => 
-    //         p.category.toLowerCase().includes(searchTerm.toLowerCase())
-    //     );
-
-    //     setFilteredPopStars(filtering);
-    // }
 
     const filterPopStarsLocallyByAny = (searchTerm: string) => {
         if (!searchTerm) {

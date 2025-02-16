@@ -1,38 +1,63 @@
+import React, { useState, useEffect } from "react";
+import { usePopStarContext } from "../contexts/PopStarContext";
 import AddPopStar from "../components/AddPopStar";
 import UpdatePopStars from "../components/UpdatePopStar";
 import DeletePopStar from "../components/DeletePopStar";
-import { usePopStarContext } from "../contexts/PopStarContext";
-import PopStarCardAdmin from "../components/PopStarCardAdmin";
+import PopStarCardAdmin from "../components/PopStarListCardAdmin";
 import Searchbar from "../components/shared/Searchbar";
-import { useEffect } from "react";
 import SearchbarDbAdmin from "../components/shared/SearchbarDbAdmin";
+import "./AdminPage.css";  // Import the CSS file
 
 function AdminPage() {
+  const { filterPopStarsLocallyByAny } = usePopStarContext();
+  const [showAdminOps, setShowAdminOps] = useState(false);
 
-    const { filterPopStarsLocallyByAny } = usePopStarContext();
+  useEffect(() => {
+    filterPopStarsLocallyByAny("");
+  }, []);
 
-    useEffect(() => {
-        filterPopStarsLocallyByAny("");
-    }, [])
+  return (
+    <div className="admin-container">
+        <div className="admin-operation-container">
 
+            <h1 className="admin-h1 admin-text-white">Administrate Pop Stars</h1>
 
-    return (
-        <div className="container mx-auto py-4">
-            <h3 className="text-3xl font-bold mb-4 text-white">Administrate Pop Stars</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+            {/* Toggle button for small screen/mobile */}
+            <button
+                className="admin-toggle-button"
+                onClick={() => setShowAdminOps(!showAdminOps)}
+                >
+                {showAdminOps ? "Hide Admin Operations" : "Show Admin Operations"}
+            </button>
+
+            {/* Wrap admin components in a container */}
+            <div className={`admin-operations ${showAdminOps ? "active" : ""}`}>
+                <div className="admin-item">
                 <AddPopStar />
+                    {/* <div className="divider"></div> */}
+                </div>
+                <div className="admin-item">
                 <UpdatePopStars />
+                    {/* <div className="divider"></div> */}
+
+                </div>
+                <div className="admin-item">
                 <DeletePopStar />
-
-                {/* AdminSearchCard here */}
+                    {/* <div className="divider"></div> */}
+                </div>
             </div>
-            <h3 className="text-3xl font-bold mb-4 text-white">Search</h3>
-                <Searchbar />
-                <SearchbarDbAdmin />
-                <PopStarCardAdmin />
-        </div>
-    )
 
+        </div>
+      <h3 className="admin-h3 admin-text-white">Database Query</h3>
+      <SearchbarDbAdmin />
+
+      <div className="divider"></div>
+
+      <Searchbar />
+      <h1>Pop Stars</h1>
+      <PopStarCardAdmin />
+    </div>
+  );
 }
 
 export default AdminPage;

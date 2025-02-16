@@ -13,7 +13,10 @@ function PopStarPage() {
     return (
         <div className="container mx-auto py-4">
 
+            <h1 className="text-white text-3xl pb-4">Pop Stars</h1>
+
             <Searchbar />
+
 
             <PopStarList/>
 

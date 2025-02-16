@@ -29,8 +29,8 @@ const DeletePopStar = () => {
     const inputStyle = 'border-2 my-1 p-1 border-music-green rounded bg-music-black text-center text-white';
 
     return(
-        <div className="w-[300px]">
-            <h1 className='text-white'>Delete a Pop Star</h1>
+        <div >
+            <h1 className='text-white text-xl'>Delete a Pop Star</h1>
             <div>
                 <input 
                 type="number"
@@ -41,10 +41,12 @@ const DeletePopStar = () => {
             </div>
             <button 
                 onClick={handleDeletePopStarById}
-                className='bg-music-green text-black rounded p-2 hover:scale-105 transition-transform mt-2'>
+                className='bg-music-green hover:bg-music-darkgreen font-bold text-black rounded p-2 hover:scale-105 transition-transform my-1 w-52'>
                     <FontAwesomeIcon icon={faTrash} />
                     &nbsp; Delete
             </button>
+            <p className="text-sm text-yellow-500">Deleting is permanent</p>
+
             {error && <p className='text-red-500'>{error}</p>}
         </div>
     )

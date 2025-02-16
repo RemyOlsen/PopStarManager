@@ -2,7 +2,6 @@ import { usePopStarContext } from "../../contexts/PopStarContext";
 import React, { useEffect, useRef, useState } from "react";
 import IPopStar from "../../interfaces/IPopStar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -17,21 +16,8 @@ function SearchbarDbAdmin() {
     useEffect(() => {
         if (initialPopStarsRef.current === null && popStars !== null && popStars.length > 0) {
             initialPopStarsRef.current = popStars;
-            // console.log("SearchbarDb, Setting initialPopStarsRef to ", popStars);
         }
     }, [popStars]);
-    
-
-    // console.log("SearchbarDb, Pop stars: ", popStars);
-    // console.log("SearchbarDb, Initial pop stars: ", initialPopStarsRef.current);
-
-    // const handleLocalSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    //     const searchTerm = e.target.value;
-    //     setSearchTerm(searchTerm);
-
-    //     // filterPopStarsLocallyByCategory(searchTerm);
-    //     filterPopStarsLocallyByAny(searchTerm);
-    // }
 
     const handleDatabaseSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setDatabaseSearchTerm(e.target.value);
@@ -68,14 +54,12 @@ function SearchbarDbAdmin() {
 
         fetchAllPopStars();
 
-        // filterPopStarsLocallyByCategory("");
-        // console.log("SearchbarDb, Initial pop stars ref: ", initialPopStarsRef.current);
         if (initialPopStarsRef.current !== null) {
             setPopStars([...initialPopStarsRef.current]);
-            // console.log("SearchbarDb, Initial pop stars ref: ", initialPopStarsRef.current);
         }
     }
 
+    const buttonStyle = "bg-music-green hover:bg-music-darkgreen text-music-black font-bold py-2 px-4 rounded";
     return (
         <div className="flex flex-col mx-4 mb-4 sm:mx-0 ">
             <div className="flex flex-col sm:flex-row items-center mb-4">
@@ -84,7 +68,7 @@ function SearchbarDbAdmin() {
                 </label>
                 <input 
                     type="text"
-                    placeholder="Search database, name is case sensitive."
+                    placeholder="Query the database. Name is case sensitive."
                     value={databaseSearchTerm}
                     onChange={handleDatabaseSearchChange}
                     className="mt-4 sm:mt-0 p-2 border-2 w-full sm:w-96 md:w-96 lg:w-96 rounded text-center border-music-green bg-music-black text-white"
@@ -93,25 +77,25 @@ function SearchbarDbAdmin() {
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                 <button
                     onClick={() => getPopStarsById(databaseSearchTerm)}
-                    className="bg-music-green hover:bg-blue-700 text-music-black font-bold py-2 px-4 rounded"
+                    className={buttonStyle}
                 >
                     Search by ID
                 </button>
                 <button
                     onClick={() => getPopStarByName(databaseSearchTerm)}
-                    className="bg-music-green hover:bg-blue-700 text-music-black font-bold py-2 px-4 rounded"
+                    className={buttonStyle}
                 >
                     Search by Name
                 </button>
                 <button 
                     onClick={() => getPopStarsByCategory(databaseSearchTerm)}
-                    className="bg-music-green hover:bg-blue-700 text-music-black font-bold py-2 px-4 rounded"
+                    className={buttonStyle}
                 >
                     Search by Category
                 </button>
                 <button 
                     onClick={() => resetPopStars()}
-                    className="bg-music-green hover:bg-blue-700 text-music-black font-bold py-2 px-4 rounded"
+                    className={buttonStyle}
                 >
                     Reset
                 </button>

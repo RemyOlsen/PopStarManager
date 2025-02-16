@@ -48,6 +48,7 @@ const UpdatePopStars = () => {
 
     const changePopStarName = (e: ChangeEvent<HTMLInputElement>) => {
         setUpdatedPopStar({...updatedPopStar, name: toTitleCase(e.target.value)});
+        
     }
 
     const changePopStarCategory = (e: ChangeEvent<HTMLInputElement>) => {
@@ -110,18 +111,17 @@ const UpdatePopStars = () => {
     const inputStyle = 'border-2 my-1 p-1 border-music-green rounded bg-music-black text-center text-white';
 
     return (
-        <div className="w-[300px]">
-            <h1 className="text-white">Update Pop Star</h1>
+        <div>
+            <h1 className="text-white text-xl">Update Pop Star</h1>
             <input
                 type="number"
                 placeholder="Enter Pop Star ID"
                 value={popStarId ?? ""}
                 onChange={(e) => setPopStarId(parseInt(e.target.value))}
-                className = {inputStyle}
-            />
-            
+                className = {inputStyle}/>
+                <br />
                 <button
-                    className="bg-music-green text-black rounded p-2 hover:scale-105 transition-transform ml-2"
+                    className="bg-music-green hover:bg-music-green font-bold text-black rounded p-2 hover:scale-105 transition-transform w-52 my-1"
                     onClick={handleGetPopStarById}
                 >
                     <FontAwesomeIcon icon={faHand} />
@@ -142,7 +142,7 @@ const UpdatePopStars = () => {
                         onChange={changePopStarId}
                         className = {inputStyle}
                     />
-                    <p className="text-sm text-yellow-500">Note: This can only overwrite existing ID's</p>
+                    <p className="text-sm text-yellow-500">ID change can only overwrite existing ID's</p>
                     <label className="text-white">Name: </label>
                     <br />
                     <input
@@ -164,6 +164,7 @@ const UpdatePopStars = () => {
                     />
                     <br />
                     <label className="text-white">Price per hour: </label>
+                    <br />
                     <input
                         type="number"
                         placeholder="Price per hour"
@@ -171,15 +172,17 @@ const UpdatePopStars = () => {
                         onChange={changePopStarPricePerHour}
                         className = {inputStyle}
                     />
+                    <p className="text-sm text-yellow-500">Price in Thousands</p>
+
                     <br />
                     <input
                         type="file"
                         onChange={handleImageChange}
-                        className="text-white"
+                        className="text-white my-3"
                     />
                     <br />
                     <button 
-                        className="bg-music-green text-black rounded p-2 hover:scale-105 transition-transform mt-2"
+                        className="bg-music-green hover:bg-music-darkgreen font-bold text-black rounded p-2 hover:scale-105 transition-transform my-2 w-52"
                         onClick={handleUpdatePopStar}>
                         <FontAwesomeIcon icon={faPenSquare} />
                         &nbsp; Update
