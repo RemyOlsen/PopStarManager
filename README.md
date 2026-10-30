@@ -1,5 +1,6 @@
 # Pop Star Manager
 This project was made by candidate **7** for  **DS3103 Web Development.**
+<br>
 Grade: A
 
 ## Introduction
